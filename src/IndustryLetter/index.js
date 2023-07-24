@@ -21,7 +21,7 @@ const ApplicantRoleSection = ({ setDetails }) => {
             <TextField required fullWidth label='Employer' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ employer: e.target.value })} />
         </div>
         <div style={{ width: '100%', marginTop: 10 }}>
-            <TextField required rows={2} multiline fullWidth label='Description of the Porject/work' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ projDesc: e.target.value })} />
+            <TextField required rows={2} multiline fullWidth label='Description of the Project/work' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ projDesc: e.target.value })} />
         </div>
     </div>
 }

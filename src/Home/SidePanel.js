@@ -1,8 +1,12 @@
 import '../Dashboard/dashboard.css'
 
 const sidePanelLinks = [
-    { name: 'Industry Letter', route: 'industry', selected: true },
-    { name: 'FM Personal Letter', route: 'finance', selected: false }
+    { name: 'Industry Letter', route: 'industry' },
+    { name: 'FM Personal Letter', route: 'finance' },
+    { name: 'Credibility Letter', route: 'credibility' },
+    { name: 'IT Critical Capacity Letter', route: 'critical' },
+    { name: 'JudgeWork Letter', route: 'Law' }
+
 ]
 const SidePanel = ({ setSelectedLetter, selectedLetter }) => {
     return <div style={{ display: 'flex', flexDirection: 'column' }}>
