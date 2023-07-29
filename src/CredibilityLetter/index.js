@@ -120,7 +120,7 @@ const CredibilityLetter = () => {
 
   const generateCredibilityLetter = async () => {
     const sectionQuery =
-      `EB1 visa recommendation letter from an industry for ${details.recommenderName}.who works as a  ${details.recommenderRole} at ${details.recommenderCompany} The industry recommendation should should start with I presently working as a ${details.recommenderRole}and ${details.projDesc} add the importance of his role to the nation in under 100 words.  No need to pleased to provide sentence, start the letter with application name. No need to salutations.
+      `EB1 visa recommendation letter from an industry for ${details.recommenderName}.who works as a  ${details.recommenderRole} at ${details.recommenderCompany} The industry recommendation should should start with I presently working as a ${details.recommenderRole}and ${details.projDesc} add the importance of his role to the nation in under 100 words.  No need to pleased to provide sentence, start the letter with application name.
         The second paragraph starts with ${details.name} and ${details.designation} underlining the value and effort and his importance to the field for working ${details.projDesc}. The paragraph should not exceed 150 words. `
     const response = await generateCompletion(sectionQuery)
     setGeneratedLetter(response.replaceAll('\n', '<br />'))

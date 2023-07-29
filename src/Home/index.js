@@ -5,9 +5,11 @@ import FMPeronsalStatement from '../FMPeronsalStatement'
 import CredibilityLetter from '../CredibilityLetter'
 import ITcritical from '../IT'
 import JudgeWork from '../Judgework'
+import FieldEndeavour from '../FieldofEndeavour'
 
 import './home.css'
 import SidePanel from './SidePanel'
+import CriticalRole from '../CriticalRoleLetter'
 
 const Home = () => {
     const [selectedLetter, setSelectedLetter] = useState('industry')
@@ -16,7 +18,9 @@ const Home = () => {
         finance: <FMPeronsalStatement />,
         credibility: <CredibilityLetter />,
         critical: <ITcritical />,
-        Law: <JudgeWork />
+        Law: <JudgeWork />,
+        field:<FieldEndeavour/>,
+        criticalrole:<CriticalRole/>
 
 
     }

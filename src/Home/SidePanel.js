@@ -5,7 +5,9 @@ const sidePanelLinks = [
     { name: 'FM Personal Letter', route: 'finance' },
     { name: 'Credibility Letter', route: 'credibility' },
     { name: 'IT Critical Capacity Letter', route: 'critical' },
-    { name: 'JudgeWork Letter', route: 'Law' }
+    { name: 'JudgeWork Letter', route: 'Law' },
+    { name: 'Field of Endeavour Letter', route:'field'},
+    { name: 'Critical Role Letter', route:'criticalrole'}
 
 ]
 const SidePanel = ({ setSelectedLetter, selectedLetter }) => {
