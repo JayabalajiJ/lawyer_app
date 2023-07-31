@@ -21,19 +21,19 @@ const RecommenderDetails = ({setDetails}) =>{
             <TextField required fullWidth label='Recommender Company' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ recommenderCompany: e.target.value })} />
         </div>
         <div style={{ width:'60%',marginTop:20 }}>
-            <TextField required rows={2} multiline fullWidth label='Recommender-Address' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ projDesc: e.target.value })} />
+            <TextField required rows={2} multiline fullWidth label='Recommender-Address' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({recommenderAddress: e.target.value })} />
         </div>
         <div style={{ width:'100%',marginTop:20}}>
-            <TextField required rows={5} multiline fullWidth label='Recommender Experience Details' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ projDesc: e.target.value })} />
+            <TextField required rows={5} multiline fullWidth label='Recommender Experience Details' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({recommenderExperience: e.target.value })} />
         </div>
         
        <div style={{ width: '100%', display: 'flex', flexWrap: 'wrap'}}>
 
         <div style={{ width: '30%',marginTop:'2%',paddingright:'4rem'}}>
-            <TextField required fullWidth label='Recommender E-mail ID' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ recommenderName: e.target.value })} />
+            <TextField required fullWidth label='Recommender E-mail ID' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ recommenderEmail: e.target.value })} />
         </div>
         <div style={{ width: '30%',marginTop:'2%',paddingLeft:'2rem'}}>
-            <TextField required fullWidth label='Recommender Phone No:' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ recommenderName: e.target.value })} />
+            <TextField required fullWidth label='Recommender Phone No:' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ recommenderPhone: e.target.value })} />
         </div>
         </div>
     </div>
@@ -42,14 +42,14 @@ const RecommenderDetails = ({setDetails}) =>{
 const ApplicantRoleSection = ({ setDetails }) => {
     return <div style={{ width: '100%', display: 'flex', flexWrap: 'wrap' }}>
         <div style={{ width: '30%' }}>
-            <TextField required fullWidth label='Applicant Full Name with salutation' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ name: e.target.value })} />
+            <TextField required fullWidth label='Applicant Full Name with salutation' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({Applicantname: e.target.value })} />
         </div>
         <div style={{ width: '30%', marginLeft: '5%' }}>
-            <TextField required fullWidth label='Organization' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ employer: e.target.value })} />
+            <TextField required fullWidth label='Organization' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({Applicantemployer: e.target.value })} />
         </div>
        
         <div style={{ width: '100%', marginTop: 30 }}>
-            <TextField required rows={7} multiline fullWidth label='Applicant Contribution to Organization' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ projDesc: e.target.value })} />
+            <TextField required rows={7} multiline fullWidth label='Applicant Contribution to Organization' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ApplicantContribution: e.target.value })} />
         </div>
     </div>
 }
@@ -64,9 +64,9 @@ const CriticalRole = () =>{
     ];
 
     const generateCriticalRoleLetter = async () => {
-        const sectionQuery =
-          `Craft a EB1 visa critical letter from an Industry for ${details.recommenderName} working as a ${details.recommenderRole} at ${details.recommenderCompany}.The second paragraph starts with  ${details.Name} working as a ${details.employer} and the entire details of his work ${details.projDesc}. The letter should ends with
-          ${details.recommenderName} and ${details.recommenderName}. The letter should be within 150 words. `
+        const sectionQuery =T
+          `Craft a EB1 visa critical letter from an Industry for ${details.recommenderName} working as a ${details.recommenderRole} at ${details.recommenderCompany}.The second paragraph starts with  ${details.Applicantname} working as a ${details.Applicantemployer} and the entire details of his work ${details.ApplicantContribution}.
+         In salutation the email id should be${details.recommenderEmail} and  phone number should be${details.recommenderPhone}. The letter should be within 150 words. `
         const response = await generateCompletion(sectionQuery)
         setGeneratedLetter(response.replaceAll('\n', '<br />'))
       };

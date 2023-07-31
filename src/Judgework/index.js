@@ -29,7 +29,7 @@ const RecommenderDetails = ({setDetails}) =>{
 const Testimonial = ({setDetails}) =>{
     return  <div style={{ width: '100%', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
     <div style={{ width: '100%' }}>
-    <TextField rows={10} required multiline fullWidth label='Applicant Testimonial Details' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ projDesc: e.target.value })} />
+    <TextField rows={10} required multiline fullWidth label='Applicant Testimonial Details' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ projDesc1: e.target.value })} />
 </div>
 </div>
 }
@@ -37,7 +37,7 @@ const Testimonial = ({setDetails}) =>{
 const Conclusion = ({setDetails}) =>{
     return  <div style={{ width: '100%', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
     <div style={{ width: '100%' }}>
-    <TextField rows={5} required multiline fullWidth label='Brief-Conclusion' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ ProjDesc: e.target.value })} />
+    <TextField rows={5} required multiline fullWidth label='Brief-Conclusion' id="outlined-basic" variant="outlined" onBlur={(e) => setDetails({ ProjDesc2: e.target.value })} />
     </div>
     </div>
 }
@@ -54,7 +54,7 @@ const JudgeWork = ({}) =>{
 
     const generateJudgeWorkLetter = async () => {
         const sectionQuery =
-          `Craft a EB1 visa Judgework letter from an Industry for ${details.recommenderName} working as a ${details.recommenderRole} at ${details.recommenderCompany}. The brief information about the organization ${details.recommenderCompany} in 100 words. The testimonial details ${details.projDesc} and the brief conclusion ${details.projDesc} about the applicant. The Judgework letter should starts with I presently working as `
+          `Craft a EB1 visa Judgework letter from an Industry for ${details.recommenderName} working as a ${details.recommenderRole} at ${details.recommenderCompany}. The brief information about the organization ${details.recommenderCompany} in 100 words. The testimonial details ${details.projDesc1} and the brief conclusion ${details.projDesc2} about the applicant. The Judgework letter should starts with I presently working as `
         const response = await generateCompletion(sectionQuery)
         setGeneratedLetter(response.replaceAll('\n', '<br />'))
       };
