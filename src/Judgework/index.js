@@ -54,7 +54,7 @@ const JudgeWork = ({}) =>{
 
     const generateJudgeWorkLetter = async () => {
         const sectionQuery =
-          `Craft a EB1 visa Judgework letter from an Industry for ${details.recommenderName} working as a ${details.recommenderRole} at ${details.recommenderCompany}. The brief information about the organization ${details.recommenderCompany} in 100 words. The testimonial details ${details.projDesc1} and the brief conclusion ${details.projDesc2} about the applicant. The Judgework letter should starts with I presently working as `
+          `write a EB1 visa Judgework letter from an Industry for ${details.recommenderName} working as a ${details.recommenderRole} at ${details.recommenderCompany}. The brief information about the organization ${details.recommenderCompany} in 100 words. The testimonial details ${details.projDesc1} and the brief conclusion ${details.projDesc2} about the applicant. The Judgework letter should starts with I presently working as `
         const response = await generateCompletion(sectionQuery)
         setGeneratedLetter(response.replaceAll('\n', '<br />'))
       };
