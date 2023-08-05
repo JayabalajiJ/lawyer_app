@@ -1,15 +1,17 @@
 import '../Dashboard/dashboard.css'
 
 const sidePanelLinks = [
-    { name: 'Industry Letter', route: 'industry' },
     { name: 'FM Personal Letter', route: 'finance' },
+    { name: 'Industry Letter', route: 'industry' },
     { name: 'Credibility Letter', route: 'credibility' },
     { name: 'IT Critical Capacity Letter', route: 'critical' },
     { name: 'JudgeWork Letter', route: 'Law' },
     { name: 'Field of Endeavour Letter', route:'field'},
-    { name: 'Critical Role Letter', route:'criticalrole'}
-
-]
+    { name: 'Critical Role Letter', route:'criticalrole'},
+    { name: 'Reputation Letter', route:'reputation'},
+    { name: 'Academic Sample', route:'academic'},
+    { name: 'Regarding Letter',route:'regard'}
+].sort((x,y) => y.name > x.name ? -1 : 1)
 const SidePanel = ({ setSelectedLetter, selectedLetter }) => {
     return <div style={{ display: 'flex', flexDirection: 'column' }}>
         {sidePanelLinks.map(x => {

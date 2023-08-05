@@ -10,6 +10,9 @@ import FieldEndeavour from '../FieldofEndeavour'
 import './home.css'
 import SidePanel from './SidePanel'
 import CriticalRole from '../CriticalRoleLetter'
+import Reputation from '../ReputationLetter'
+import AcademicSample from '../AcademicSample'
+import RegardingLetter from '../RegardingLetter'
 
 const Home = () => {
     const [selectedLetter, setSelectedLetter] = useState('industry')
@@ -20,7 +23,10 @@ const Home = () => {
         critical: <ITcritical />,
         Law: <JudgeWork />,
         field:<FieldEndeavour/>,
-        criticalrole:<CriticalRole/>
+        criticalrole:<CriticalRole/>,
+        reputation:<Reputation/>,
+        academic:<AcademicSample/>,
+        regard:<RegardingLetter/>
 
 
     }
